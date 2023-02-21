@@ -27,7 +27,7 @@
 	</head>
 	<body>
 		
-		<div class="A">APP永久官网发布页：<a href="https://okywq.github.io" target="_self" class="C">okywq.github.io</a></div>
+		<div class="A">APP永久官网发布页：<a href="javascript:;" onclick="setshare()" class="C">okywq.github.io</a></div>
 		<div class="A">请截图收藏本页或保存下方二维码！<font color="#FF0000">防止失联！</font></div>
 		<hr/>
 		<div class="A"><a href="https://3g.lenovomm.com/w3g/yydownload/com.okyuanwei.app/17071" target="_blank">安卓免费下载</a></div>
@@ -42,5 +42,27 @@
 		<div class="B">【提示】苹果如果无法安装，请前往“设置”、“Safari浏览器”、“请求桌面网站”、“所有网站”、“关闭”后刷新页面重新下载！</div>
 		<hr/>
 		<img src="https://okywq.github.io/qrcode.jpg">
+		<script>
+			$(".p_s5 .menu .lk").click(function(){
+
+			$(this).addClass("cur").siblings().removeClass("cur");
+
+			var index=$(this).parent('.menu').children('.lk').index(this);    
+
+			$(this).parents(".menu").siblings(".tabwrap").find(".module").eq(index).show().siblings('.module').hide();
+
+		    });
+		    function setshare(){
+			let txt = "https://okywq.github.io";
+				let txa = document.createElement('textarea')
+				txa.value = txt
+				document.body.appendChild(txa);
+				txa.select(); // 选择对象;
+				document.execCommand("Copy"); // 执行浏览器复制命令
+				// 复制成功提示;
+				alert('官网链接复制成功！https://okywq.github.io');
+				txa.remove()
+		    }
+		</script>
 	</body>
 </html>
